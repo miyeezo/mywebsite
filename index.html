@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Brand Showcase</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: #f8fafc; color: #0f172a; line-height: 1.6; }
+    header { background: #ffffff; padding: 18px 8%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); position: sticky; top: 0; }
+    .logo { font-size: 1.3rem; font-weight: 700; color: #2563eb; }
+    .lang-btns button { margin-left: 8px; padding: 6px 12px; border: 1px solid #cbd5e1; background: #fff; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+    .lang-btns button.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .hero { text-align: center; padding: 90px 8% 70px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; }
+    .hero h1 { font-size: 2.4rem; margin-bottom: 16px; }
+    .hero p { font-size: 1.1rem; color: #cbd5e1; max-width: 650px; margin: 0 auto 30px; }
+    .btn { display: inline-block; padding: 12px 28px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; }
+    .section { padding: 60px 8%; max-width: 1100px; margin: 0 auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 30px; }
+    .card { background: #fff; padding: 28px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .card h3 { margin-bottom: 10px; color: #1e293b; }
+    .contact { background: #ffffff; text-align: center; padding: 60px 8%; border-top: 1px solid #e2e8f0; }
+    footer { text-align: center; padding: 24px; font-size: 0.85rem; color: #64748b; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Miyeezo</div>
+  <div class="lang-btns">
+    <button onclick="setLang('en')" id="btn-en" class="active">English</button>
+    <button onclick="setLang('zh')" id="btn-zh">中文</button>
+    <button onclick="setLang('ru')" id="btn-ru">Русский</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h1 id="hero-title">Premium Quality Products for Global Markets</h1>
+  <p id="hero-desc">Delivering reliable manufacturing, modern design, and direct global supply to North America, Europe, Russia, and Asia.</p>
+  <a href="#contact" class="btn" id="hero-cta">Contact Us</a>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;" id="prod-heading">Featured Products</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 id="p1-title">Product Series A</h3>
+      <p id="p1-desc">High durability and precision engineering tailored for international standards.</p>
+    </div>
+    <div class="card">
+      <h3 id="p2-title">Product Series B</h3>
+      <p id="p2-desc">Eco-friendly materials with customizable specifications for wholesale & retail.</p>
+    </div>
+    <div class="card">
+      <h3 id="p3-title">Custom OEM / ODM</h3>
+      <p id="p3-desc">Flexible production capacity with strict quality control and fast global shipping.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 id="contact-title" style="margin-bottom: 14px;">Get in Touch</h2>
+  <p id="contact-desc" style="color:#475569; margin-bottom: 20px;">Reach out directly via email or instant messaging for catalogs and quotes.</p>
+  <p><strong>Email:</strong> zhangqingpo1986@gmail.com &nbsp;|&nbsp; <strong>WhatsApp / Telegram:</strong> +86 15863681585</p>
+</section>
+
+<footer>© 2026 Miyeezo. All Rights Reserved.</footer>
+
+<script>
+  const data = {
+    en: {
+      heroTitle: "Premium Quality Products for Global Markets",
+      heroDesc: "Delivering reliable manufacturing, modern design, and direct global supply to North America, Europe, Russia, and Asia.",
+      heroCta: "Contact Us",
+      prodHeading: "Featured Products",
+      p1Title: "Product Series A", p1Desc: "High durability and precision engineering tailored for international standards.",
+      p2Title: "Product Series B", p2Desc: "Eco-friendly materials with customizable specifications for wholesale & retail.",
+      p3Title: "Custom OEM / ODM", p3Desc: "Flexible production capacity with strict quality control and fast global shipping.",
+      contactTitle: "Get in Touch", contactDesc: "Reach out directly via email or instant messaging for catalogs and quotes."
+    },
+    zh: {
+      heroTitle: "面向全球市场的高品质产品与供应链",
+      heroDesc: "致力于为北美、欧洲、俄罗斯及中国客户提供可靠制造、现代设计与全球直发服务。",
+      heroCta: "联系我们",
+      prodHeading: "核心产品展示",
+      p1Title: "产品系列 A", p1Desc: "符合国际质量标准，工艺精湛，经久耐用。",
+      p2Title: "产品系列 B", p2Desc: "环保优质材料，支持零售与批发规格定制。",
+      p3Title: "OEM / ODM 定制服务", p3Desc: "柔性化生产能力，严格品控，支持全球快速配送。",
+      contactTitle: "联系与合作", contactDesc: "欢迎通过邮件或即时通讯工具联系我们获取产品目录与报价。"
+    },
+    ru: {
+      heroTitle: "Высококачественная продукция для мирового рынка",
+      heroDesc: "Надежное производство, современный дизайн и прямые поставки в Европу, США, Россию и Азию.",
+      heroCta: "Связаться с нами",
+      prodHeading: "Наша продукция",
+      p1Title: "Серия продуктов A", p1Desc: "Высокая надежность и точность исполнения по международным стандартам.",
+      p2Title: "Серия продуктов B", p2Desc: "Экологичные материалы и индивидуальные характеристики для опта и розницы.",
+      p3Title: "OEM / ODM производство", p3Desc: "Гибкие производственные мощности, строгий контроль качества и быстрая доставка.",
+      contactTitle: "Контакты", contactDesc: "Свяжитесь с нами по электронной почте или в мессенджерах для получения каталога."
+    }
+  };
+  function setLang(lang) {
+    document.querySelectorAll('.lang-btns button').forEach(b => b.classList.remove('active'));
+    document.getElementById('btn-' + lang).classList.add('active');
+    const t = data[lang];
+    document.getElementById('hero-title').innerText = t.heroTitle;
+    document.getElementById('hero-desc').innerText = t.heroDesc;
+    document.getElementById('hero-cta').innerText = t.heroCta;
+    document.getElementById('prod-heading').innerText = t.prodHeading;
+    document.getElementById('p1-title').innerText = t.p1Title;
+    document.getElementById('p1-desc').innerText = t.p1Desc;
+    document.getElementById('p2-title').innerText = t.p2Title;
+    document.getElementById('p2-desc').innerText = t.p2Desc;
+    document.getElementById('p3-title').innerText = t.p3Title;
+    document.getElementById('p3-desc').innerText = t.p3Desc;
+    document.getElementById('contact-title').innerText = t.contactTitle;
+    document.getElementById('contact-desc').innerText = t.contactDesc;
+  }
+</script>
+</body>
+</html>
